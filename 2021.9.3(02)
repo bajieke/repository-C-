@@ -1,0 +1,124 @@
+#include<iostream>
+#include"Sales_item.h"
+
+//1.5.1---1.20
+int main()
+{
+	Sales_item book;
+
+	std::cout << "请输入：" << std::endl;
+
+	while (std::cin >> book)
+	{
+		//std::cout << "销售记录：" << std::endl;
+		std::cout << book << std::endl;
+	}
+
+	return 0;
+}
+
+
+//1.5.1---1.21
+int main()
+{
+	Sales_item b1, b2;
+	
+	std::cin >> b1 >> b2;
+
+
+	if ( b1.compareIsbn (b2) )
+	{
+		std::cout << b1 + b2 << std::endl;
+	}
+	else
+	{
+		std::cout << "两本书isbn不相等" << std::endl;
+	}
+
+	return 0;
+}
+
+
+//1.5.1--1.22
+int main()
+{
+	Sales_item book,currBook;
+
+	std::cout << "Please enter:" << std::endl;
+
+	if (std::cin >> currBook)
+	{
+		while (std::cin >> book)
+		{
+			if (currBook.isbn == book.isbn)
+			{
+				currBook += book;
+			}
+			else
+			{
+				std::cout << "输入的Isbn不相等！" << std::endl;
+				return -1;
+			}
+		}
+		std::cout << currBook << std::endl;
+	}
+
+	return 0;
+}
+
+//1.5.2--1.24
+int main()
+{
+	Sales_item book, currBook;
+
+	if (std::cin >> currBook)
+	{
+		int count = 1;
+		while (std::cin >> book)
+		{
+			if (book.compareIsbn(currBook))
+			{
+				count++;
+			}
+			else
+			{
+				std::cout << currBook.Isbn() << "有" << count << "条销售记录" << std::endl;
+				currBook = book;
+				count = 1;
+			}
+		} 
+		std::cout << currBook.Isbn() << "有" << count << "条销售记录" << std::endl;
+	}
+	return 0;
+}
+
+
+//1.6---1.25
+int main()
+{
+	Sales_item total;
+
+	if (std::cin >> total)
+	{
+		Sales_item trans;
+		while (std::cin >> trans)
+		{
+			if (trans.Isbn() == total.Isbn())
+			{
+				total = trans;
+			}
+			else
+			{
+				std::cout << total << std::endl;
+				total = trans;
+			}
+		}
+		std::cout << total << std::endl;
+	}
+	else
+	{
+		std::cerr << "no date!" << std::endl;
+		return -1;
+	}
+	return 0;
+}
