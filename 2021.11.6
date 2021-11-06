@@ -1,0 +1,153 @@
+#include<iostream>
+
+int main()
+
+{
+
+    unsigned u=10,u2=42;
+    
+
+    std::cout<<u2-u<<std::endl;
+
+    std::cout<<u-u2<<std::endl<<std::endl;
+    
+
+    int i=10,i2=42;
+
+    
+
+    std::cout<<i2-i<<std::endl;
+
+    std::cout<<i-i2<<std::endl;
+
+    std::cout<<i-u<<std::endl;
+
+    std::cout<<u-i<<std::endl;
+
+    
+
+    return 0;
+
+}
+
+//2.1.3
+
+#include<iostream>
+
+int main()
+
+{
+
+   std::cout<<"a really,really long string literal这里有没有换行？(没有)"
+
+               "that's spans two lines."<<std::endl;
+
+    
+
+    //转义序列
+
+    std::cout<<'\n';
+
+    std::cout<<"\tHi!\n";
+
+    
+
+    std::cout<<"99\?00\"11\22\\pp\fHelloKitty"<<std::endl;
+
+    std::cout<<"wonderful\rppp"<<std::endl;
+
+    std::cout<<"99\v66\v77\v88"<<std::endl;
+
+    std::cout<<"99\fDo you know?"<<std::endl;
+
+    std::cout<<"123456\bABC"<<std::endl<<std::endl;
+
+    
+
+    std::cout<<"\115m\x4d\40k\40g\12"<<std::endl;
+
+    std::cout<<"Hi \x4do\115\n"<<std::endl;
+    
+
+    std::cout<<'\115'<<'o'<<'\x4d'<<'\n';
+    
+    std::cout<<'I'<<'\40'<<'l'<<'o'<<'v'<<'e'<<'\40'<<'U'<<std::endl;
+
+    std::cout<<"-------"<<std::endl;
+
+
+    return 0;
+
+}
+
+
+//2.2.1
+
+#include<iostream>
+
+int main()
+
+{
+
+    //变量定义
+
+    int sum=0,value,
+
+        units_sold1=0;
+
+        
+
+    std::string book("201-xiaolin-89");
+
+    std::cout<<book;
+
+    
+
+    //初始值
+
+    double price=199.6,discount=price*0.1;
+
+    //double saleprice=applyDiscount(price,discount);
+
+
+    
+
+    //列表初始化
+
+    int units_sold = 0;
+
+    int units_sold2={0};
+
+    int units_sold3(0);
+
+    int units_sold4{0};
+    
+
+    //std::cout<<int input_value=0;
+
+    std::cout<<'\n';
+
+
+    long double pi=3.1415926535;
+
+    std::cout<<pi<<std::endl;
+
+    
+
+    //int a{pi};  //执行错误
+
+    //std::cout<<a<<std::endl;
+
+    int b=pi;
+
+    std::cout<<b<<std::endl;
+
+    //int i={3};  /错误
+
+    int i=3.14;
+
+    
+
+    return 0;
+
+}
