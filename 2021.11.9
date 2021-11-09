@@ -1,0 +1,229 @@
+//2.2.4 练习
+
+#include<iostream>
+
+int abc=42;
+
+int main()
+
+{
+
+    int i=100,sum=0;
+
+    for(int i=0;i!=10;i++)
+
+        sum+=i;
+
+    std::cout<<i<<"  "<<sum<<std::endl;
+
+    
+
+    
+
+    int abc=100;
+
+    int j=abc;
+
+    
+
+    std::cout<<j<<" abc="<<abc<<std::endl;//100 100
+
+    std::cout<<j<<" ::abc="<<::abc<<std::endl;//100 42
+
+    
+
+    return 0;
+
+}
+
+//2.2.4
+
+#include<iostream>
+
+int a=100;
+
+int main()
+
+{
+
+    std::cout<<a<<std::endl; //100
+
+    
+
+    int a=9;
+
+    
+
+    std::cout<<a<<std::endl; //9
+
+    std::cout<<::a<<std::endl; //100
+
+    
+
+    return 0;
+
+}
+
+//2.3.1
+
+//2.16练习
+
+#include<iostream>
+
+int main()
+
+{
+
+    int i=0,&r1=i;
+
+    
+
+    double d=9,&r2=d;
+
+    
+
+    //r2=3.14159;
+
+    
+
+    //r2=r1;
+
+    
+
+    //i=r2;
+
+    
+
+    //r1=d;
+
+    
+
+    std::cout<<"i="<<i<<std::endl;
+
+    std::cout<<"r1="<<r1<<std::endl;
+
+    std::cout<<"d="<<d<<std::endl;
+
+    std::cout<<"r2="<<r2<<std::endl;
+
+    
+
+    return 0;
+
+}
+
+//练习2.17
+
+#include<iostream>
+
+int main()
+
+{
+
+    int i,&ri=i;
+
+    
+
+    i=5;
+
+    ri=10;
+
+    std::cout<<i<<" "<<ri<<std::endl;
+
+    
+
+    return 0;
+
+}
+
+//2.3.2
+
+#include<iostream>
+
+int main()
+
+{
+
+    void *pd;
+
+    //double obj=3.14;
+
+    //pd=&obj;
+
+    
+
+    double obj=3.14;pd=&obj;//void*可以存放任何对象地址
+
+    
+
+    
+
+    void *pv=&obj; //obj可以为任何类型
+
+    
+
+    
+
+    pv=pd; //void*可以存放任何指针
+
+    
+
+    //std::cout<<*pd<<std::endl;
+
+    
+
+    return 0;
+
+}
+
+//2.3.2练习
+
+#include<iostream>
+
+int main()
+
+{
+
+    int i=9;
+
+    int *p=&i;
+
+    
+
+    *p=(*p)*(*p);
+
+    std::cout<<*p<<" "<<i<<std::endl;
+
+    
+
+    int a=10;
+
+    int b=20;
+
+    
+
+    int *p1=&a;
+
+    *p1=99;
+
+    
+
+    std::cout<<"a="<<a<<std::endl;
+
+    std::cout<<"b="<<b<<std::endl;
+
+    std::cout<<"p1="<<p1<<std::endl;
+
+    std::cout<<"*p1="<<*p1<<std::endl;
+
+    
+
+    p1=&b;
+
+    std::cout<<"p1="<<p1<<std::endl;
+
+    
+
+    return 0;
+
+}
